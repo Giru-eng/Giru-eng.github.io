@@ -49,6 +49,11 @@
           margin: auto;
         }
 
+        /* Hide the other images except top one by default */
+        .otherImages {
+          display: none;
+        }
+        
         /* Next & previous buttons */
         .prev, .next {
           cursor: pointer;
@@ -110,18 +115,6 @@
 
         .active, .dot:hover {
           background-color: #717171;
-        }
-        /* Fading animation */
-        .fade {
-          -webkit-animation-name: fade;
-          -webkit-animation-duration: 10s;
-          animation-name: fade;
-          animation-duration: 10s;
-          display: none;
-        }
-        @-webkit-keyframes fade {
-          from {opacity: 1}
-          to {opacity: 1}
         }
     </style>
     <script>
@@ -206,19 +199,19 @@
                     <img src="img0.png" style="width:60%">
                     <div class="text">Kintai-Slackbot</div>
                   </div>
-                  <div class="mySlides">
+                  <div class="mySlides", "otherImages">
                     <div class="numbertext">2 / 4</div>
                     <img src="img1.gif" style="width:100%">
                     <div class="text">Default Reply</div>
                   </div>
 
-                  <div class="mySlides">
+                  <div class="mySlides", "otherImages">
                     <div class="numbertext">3 / 4</div>
                     <img src="img2.gif" style="width:100%">
                     <div class="text">出勤</div>
                   </div>
 
-                  <div class="mySlides">
+                  <div class="mySlides", "otherImages">
                     <div class="numbertext">4 / 4</div>
                     <img src="img3.gif" style="width:100%">
                     <div class="text">休憩開始</div>
