@@ -149,33 +149,33 @@
           dots[slideIndex-1].className += " active";
         }
         /* JS for フリーマーケットアプリケーション */        
-        var slideIndex2 = 1;
-        showSlides2(slideIndex2);
+        var slideIndex_b = 1;
+        showSlides_b(slideIndex_b);
 
         // Next/previous controls
-        function plusSlides2(n2) {
-          showSlides2(slideIndex2 += n2);
+        function plusSlides_b(n_b) {
+          showSlides_b(slideIndex_b += n_b);
         }
 
         // Thumbnail image controls
-        function currentSlide2(n2) {
-          showSlides2(slideIndex2 = n2);
+        function currentSlide_b(n_b) {
+          showSlides_b(slideIndex_b = n_b);
         }
 
-        function showSlides2(n2) {
-          var i2;
-          var slides2 = document.getElementsByClassName("mySlides2");
-          var dots2 = document.getElementsByClassName("dot2");
-          if (n2 > slides2.length) {slideIndex2 = 1}
-          if (n2 < 1) {slideIndex2 = slides2.length}
-          for (i2 = 0; i2 < slides2.length; i2++) {
-              slides2[i2].style.display = "none";
+        function showSlides_b(n_b) {
+          var i_b;
+          var slides_b = document.getElementsByClassName("mySlides_b");
+          var dots_b = document.getElementsByClassName("dot_b");
+          if (n_b > slides_b.length) {slideIndex_b = 1}
+          if (n_b < 1) {slideIndex_b = slides_b.length}
+          for (i_b = 0; i_b < slides_b.length; i_b++) {
+              slides_b[i_b].style.display = "none";
           }
-          for (i2 = 0; i2 < dots2.length; i2++) {
-              dots2[i2].className = dots2[i2].className.replace(" active", "");
+          for (i_b = 0; i_b < dots_b.length; i_b++) {
+              dots_b[i_b].className = dots_b[i_b].className.replace(" active", "");
           }
-          slides2[slideIndex2-1].style.display = "block";
-          dots2[slideIndex2-1].className += " active";
+          slides_b[slideIndex_b-1].style.display = "block";
+          dots_b[slideIndex_b-1].className += " active";
         }
     </script>
 </head>
@@ -349,83 +349,83 @@
                 <div class="slideshow-container">
 
                   <!-- Full-width images with number and caption text -->
-                  <div class="mySlides2">
+                  <div class="mySlides_b">
                     <div class="numbertext">1 / 10</div>
                     <img src="imgF0.jpeg" style="width:60%">
                     <div class="text">フリーマーケットアプリケーション</div>
                   </div>
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">2 / 10</div>
                     <img src="imgF1.gif" style="width:100%">
                     <div class="text">ログイン機能</div>
                   </div>
 
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">3 / 10</div>
                     <img src="imgF2.gif" style="width:100%">
                     <div class="text">販売手数料&利益自動計算(javascript)</div>
                   </div>
 
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">4 / 10</div>
                     <img src="imgF3.gif" style="width:100%">
                     <div class="text">商品出品情報登録機能</div>
                   </div>
 
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">5 / 10</div>
                     <img src="imgF4.gif" style="width:100%">
                     <div class="text">商品一覧表示機能</div>
                   </div>
 
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">6 / 10</div>
                     <img src="imgF5.gif" style="width:100%">
                     <div class="text">商品詳細表示機能</div>
                   </div>
 
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">7 / 10</div>
                     <img src="imgF6.gif" style="width:100%">
                     <div class="text">商品情報編集機能</div>
                   </div>
                     
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">8 / 10</div>
                     <img src="imgF7.gif" style="width:100%">
                     <div class="text">商品情報削除機能</div>
                   </div>
                     
-                  <div class="mySlides2 otherImages">
+                  <div class="mySlides_b otherImages">
                     <div class="numbertext">9 / 10</div>
                     <img src="imgF8.gif" style="width:100%">
                     <div class="text">商品購入機能</div>
                   </div>
                     
-　                <div class="mySlides2 otherImages">
+　                <div class="mySlides_b otherImages">
                     <div class="numbertext">9 / 10</div>
                     <img src="imgF9.png" style="width:60%">
                     <div class="text">商品出品画像の複数登録</div>
                   </div>
                     
                   <!-- Next and previous buttons -->
-                  <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                  <a class="prev" onclick="plusSlides_b(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides_b(1)">&#10095;</a>
                 </div>
                 <br>
 
                 <!-- The dots/circles -->
                 <div style="text-align:center">
-                  <span class="dot2" onclick="currentSlide2(1)"></span>
-                  <span class="dot2" onclick="currentSlide2(2)"></span>
-                  <span class="dot2" onclick="currentSlide2(3)"></span>
-                  <span class="dot2" onclick="currentSlide2(4)"></span>
-                  <span class="dot2" onclick="currentSlide2(5)"></span>
-                  <span class="dot2" onclick="currentSlide2(6)"></span>
-                  <span class="dot2" onclick="currentSlide2(7)"></span>
-                  <span class="dot2" onclick="currentSlide2(8)"></span>
-                  <span class="dot2" onclick="currentSlide2(9)"></span>
-                  <span class="dot2" onclick="currentSlide2(10)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(1)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(2)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(3)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(4)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(5)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(6)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(7)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(8)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(9)"></span>
+                  <span class="dot_b" onclick="currentSlide_b(10)"></span>
                 </div>
                 <div class="row">
                     <dl class="col-sm-2">
