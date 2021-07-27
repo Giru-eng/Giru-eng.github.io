@@ -292,9 +292,9 @@
                         <dt>説明</dt>
                         <dd>Slackbotによる勤怠自動管理ツール</dd>
                         <dt>機能</dt>
-                        <dd>google spreadsheet上でのデータ記録(User名・出退勤・休憩開始終了時間etc.) / アラート機能(残業遅刻早退、休憩時間の過不足etc.) / 複数名での利用も可能(今回はUser名をキーとしている)</dd>
+                        <dd>google spreadsheet上でのデータ記録(User名・出退勤・休憩開始終了時間etc.) / 複数名での利用も可能(今回はUser名をキーとしている) / アラート機能(残業遅刻早退、休憩時間の過不足、一部登録済statusの再登録防止)</dd>
                         <dt>技術使用ソフト</dt>
-                        <dd>python / Google Cloud Platform APIs / Slackbot API / git</dd>
+                        <dd>python / Google Cloud Platform APIs / Slackbot API / JupyterLab / Heroku / git</dd>
                         <dt>URL</dt>
                         <dd>
                             <a href="https://git.heroku.com/kintai-slackbot-hhara-heroku.git">https://git.heroku.com/kintai-slackbot-hhara-heroku.git</a>
@@ -305,7 +305,144 @@
                         </dd>
                         <dt>Github</dt>
                         <dd>
-                            <a href="https://github.com/Giru-eng/kintai-slackbot1.git">https://github.com/Giru-eng/kintai-slackbot1.git</a>
+                            <a href="https://github.com/Giru-eng/kintai-slackbot1">https://github.com/Giru-eng/kintai-slackbot1</a>
+                        </dd>
+                    </dl> 
+                </div>
+
+                <div class="row">
+                    <h3>フリーマーケットアプリケーション</h3>
+                    <p>AWS(S3,EC2)を用いたクレジット支払い型フリマサイト</p>
+                </div>
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                  <!-- Full-width images with number and caption text -->
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 11</div>
+                    <img src="img0.png" style="width:60%">
+                    <div class="text">Kintai-Slackbot</div>
+                  </div>
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">2 / 11</div>
+                    <img src="img1.gif" style="width:100%">
+                    <div class="text">Default Reply</div>
+                  </div>
+
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">3 / 11</div>
+                    <img src="img2.gif" style="width:100%">
+                    <div class="text">出勤</div>
+                  </div>
+
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">4 / 11</div>
+                    <img src="img3.gif" style="width:100%">
+                    <div class="text">休憩開始</div>
+                  </div>
+
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">5 / 11</div>
+                    <img src="img4.gif" style="width:100%">
+                    <div class="text">休憩終了(休憩時間不足)</div>
+                  </div>
+
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">6 / 11</div>
+                    <img src="img5.gif" style="width:100%">
+                    <div class="text">退勤(早退/遅刻)</div>
+                  </div>
+
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">7 / 11</div>
+                    <img src="img6.gif" style="width:100%">
+                    <div class="text">休憩終了(休憩時間超過)</div>
+                  </div>
+                    
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">8 / 11</div>
+                    <img src="img7.gif" style="width:100%">
+                    <div class="text">退勤(残業)</div>
+                  </div>
+                    
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">9 / 11</div>
+                    <img src="img8.gif" style="width:100%">
+                    <div class="text">休憩開始(当日出勤未登録/登録済status再登録)</div>
+                  </div>
+                    
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">10 / 11</div>
+                    <img src="img9.gif" style="width:100%">
+                    <div class="text">休憩終了(当日出勤未登録/登録済status再登録)</div>
+                  </div>
+                    
+                  <div class="mySlides otherImages">
+                    <div class="numbertext">11 / 11</div>
+                    <img src="img10.gif" style="width:100%">
+                    <div class="text">退勤(当日出勤未登録/登録済status再登録)</div>
+                  </div>
+                    
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                  <span class="dot" onclick="currentSlide(6)"></span>
+                  <span class="dot" onclick="currentSlide(7)"></span>
+                  <span class="dot" onclick="currentSlide(8)"></span>
+                  <span class="dot" onclick="currentSlide(9)"></span>
+                  <span class="dot" onclick="currentSlide(10)"></span>
+                  <span class="dot" onclick="currentSlide(11)"></span>
+                </div>
+                <div class="row">
+                    <dl class="col-sm-2">
+                        <dt>アプリ名</dt>
+                        <dd>フリーマーケットアプリケーション</dd>
+                        <dt>開発開始</dt>
+                        <dd>2021/6~</dd>
+                        <dt>担当範囲</dt>
+                        <dd>すべて</dd>
+                    </dl>
+                    <dl class="col-sm-10">
+                        <dt>説明</dt>
+                        <dd>PaaSとしてAWS(S3,EC2)を用い、PAY.JPにてクレジット支払い機能を実装したフリマアプリ</dd>
+                        <dt>機能</dt>
+                        <dd>ユーザー管理 / 商品出品情報登録(+商品複数画像登録) / 商品一覧&詳細表示 / 商品情報編集&削除 / PAY.JPによる商品購入</dd>
+                        <dt>技術使用ソフト</dt>
+                        <dd>Ruby / Ruby on Rails / MySQL / Github / AWS(S3, EC2) / Visual Studio Code / git</dd>
+                        <dt>URL</dt>
+                        <dd>
+                            <a href="http://35.73.84.145/">http://35.73.84.145/</a>
+                            <br>
+                            <p>アクセス/ログイン情報</p>
+                                <small>
+                                    <dt>Basic認証(ID/Pass)</dt>
+                                    <dd>ID: admin</dd>
+                                    <dd>Pass: 2222</dd>
+                                    <dt>購入者用ログイン情報</dt>
+                                    <dd>メールアドレス: bbb@bbb</dd>
+                                    <dd>パスワード: 222bbb</dd>
+                                    <dt>購入者用カード情報</dt>
+                                    <dd>番号：4242424242424242</dd>
+                                    <dd>期限：本日より未来の日付</dd>
+                                    <dd>セキュリティコード：123</dd>
+                                    <dt>出品者用ログイン情報</dt>
+                                    <dd>メールアドレス: aaa@aaa</dd>
+                                    <dd>パスワード: 111aaa</dd>
+                                </small>
+                        </dd>
+                        <dt>Github</dt>
+                        <dd>
+                            <a href="https://github.com/Giru-eng/furima-33823">https://github.com/Giru-eng/furima-33823</a>
                         </dd>
                     </dl> 
                 </div>
@@ -322,7 +459,7 @@
                 </div>
                 <div class="col-sm-4">
                     <h4 class="color-heart"><sapn class="glyphicon glyphicon-heart icon-size"></sapn><br>思い</h4>
-                    <p>常に最後に自分を決めるのは自分自身、<br>安易に答えを求めたり、責任転嫁や放棄を戒め、<br>自ら気づき判断・行動できるよう努めてく！</p>
+                    <p>常に最後に自分を決めるのは自分自身、<br>安易に答えを求めたり、責任転嫁や放棄を戒め、<br>自ら気づき判断・行動できるよう努める！</p>
                 </div>
             </div>
             <div class="row text-center">
