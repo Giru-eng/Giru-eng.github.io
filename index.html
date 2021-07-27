@@ -150,19 +150,19 @@
         }
         /* JS for フリーマーケットアプリケーション */        
         var slideIndexB = 1;
-        showSlidesB(slideIndexB);
+        showSlides(slideIndexB);
 
         // Next/previous controls
         function plusSlidesB(nB) {
-          showSlidesB(slideIndexB += nB);
+          showSlides(slideIndexB += nB);
         }
 
         // Thumbnail image controls
         function currentSlideB(nB) {
-          showSlidesB(slideIndexB = nB);
+          showSlides(slideIndexB = nB);
         }
 
-        function showSlidesB(nB) {
+        function showSlides(nB) {
           var iB;
           var slidesB = document.getElementsByClassName("mySlidesB");
           var dotsB = document.getElementsByClassName("dotB");
