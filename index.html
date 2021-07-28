@@ -49,14 +49,6 @@
           position: relative;
           margin: auto;
         }
-
-        /* Slideshow containerB */
-        .slideshow-containerB {
-          max-width: 1000px;
-          max-hight: 600px;
-          position: relative;
-          margin: auto;
-        }
         
         /* Hide the other images except top one by default */
         .otherImages {
@@ -127,63 +119,25 @@
         }
     </style>
     <script>
-        /* JS for Kintai-Slackbot */
-        var slideIndex = 1;
-        showSlides(slideIndex);
+        var slideIndex = [1,1];
+        /* Class the members of each slideshow group with different CSS classes */
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
 
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
+        function plusSlides(n, no) {
+          showSlides(slideIndex[no] += n, no);
         }
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
+        function showSlides(n, no) {
           var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
+          var x = document.getElementsByClassName(slideId[no]);
+          if (n > x.length) {slideIndex[no] = 1}
+          if (n < 1) {slideIndex[no] = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
           }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-        }
-        /* JS for フリーマーケットアプリケーション */        
-        var slideIndexB = 1;
-        showSlidesB(slideIndexB);
-
-        // Next/previous controls
-        function plusSlidesB(nB) {
-          showSlidesB(slideIndexB += nB);
-        }
-
-        // Thumbnail image controls
-        function currentSlideB(nB) {
-          showSlidesB(slideIndexB = nB);
-        }
-
-        function showSlidesB(nB) {
-          var iB;
-          var slidesB = document.getElementsByClassName("mySlidesB");
-          var dotsB = document.getElementsByClassName("dotB");
-          if (nB > slidesB.length) {slideIndexB = 1}
-          if (nB < 1) {slideIndexB = slidesB.length}
-          for (iB = 0; iB < slidesB.length; iB++) {
-              slidesB[iB].style.display = "none";
-          }
-          for (iB = 0; iB < dotsB.length; iB++) {
-              dotsB[iB].className = dotsB[iB].className.replace(" active", "");
-          }
-          slidesB[slideIndexB-1].style.display = "block";
-          dotsB[slideIndexB-1].className += " active";
+          x[slideIndex[no]-1].style.display = "block";
         }
     </script>
 </head>
@@ -233,66 +187,66 @@
                 <div class="slideshow-container">
 
                   <!-- Full-width images with number and caption text -->
-                  <div class="mySlides">
+                  <div class="mySlides1">
                     <div class="numbertext">1 / 11</div>
                     <img src="img0.png" style="width:60%">
                     <div class="text">Kintai-Slackbot</div>
                   </div>
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">2 / 11</div>
                     <img src="img1.gif" style="width:100%">
                     <div class="text">Default Reply</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">3 / 11</div>
                     <img src="img2.gif" style="width:100%">
                     <div class="text">出勤</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">4 / 11</div>
                     <img src="img3.gif" style="width:100%">
                     <div class="text">休憩開始</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">5 / 11</div>
                     <img src="img4.gif" style="width:100%">
                     <div class="text">休憩終了(休憩時間不足)</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">6 / 11</div>
                     <img src="img5.gif" style="width:100%">
                     <div class="text">退勤(早退/遅刻)</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">7 / 11</div>
                     <img src="img6.gif" style="width:100%">
                     <div class="text">休憩終了(休憩時間超過)</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">8 / 11</div>
                     <img src="img7.gif" style="width:100%">
                     <div class="text">退勤(残業)</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">9 / 11</div>
                     <img src="img8.gif" style="width:100%">
                     <div class="text">休憩開始(当日出勤未登録/登録済status再登録)</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">10 / 11</div>
                     <img src="img9.gif" style="width:100%">
                     <div class="text">休憩終了(当日出勤未登録/登録済status再登録)</div>
                   </div>
 
-                  <div class="mySlides otherImages">
+                  <div class="mySlides1 otherImages">
                     <div class="numbertext">11 / 11</div>
                     <img src="img10.gif" style="width:100%">
                     <div class="text">退勤(当日出勤未登録/登録済status再登録)</div>
@@ -354,86 +308,86 @@
                     <p>AWS(S3,EC2)を用いたクレジット支払い型フリマサイト</p>
                 </div>
                 <!-- Slideshow container -->
-                <div class="slideshow-containerB">
+                <div class="slideshow-container">
 
                   <!-- Full-width images with number and caption text -->
-                  <div class="mySlidesB">
+                  <div class="mySlides2">
                     <div class="numbertext">1 / 10</div>
                     <img src="imgF0.jpeg" style="width:60%">
                     <div class="text">フリーマーケットアプリケーション</div>
                   </div>
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">2 / 10</div>
                     <img src="imgF1.gif" style="width:100%">
                     <div class="text">ログイン機能</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">3 / 10</div>
                     <img src="imgF2.gif" style="width:100%">
                     <div class="text">販売手数料&利益自動計算(javascript)</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">4 / 10</div>
                     <img src="imgF3.gif" style="width:100%">
                     <div class="text">商品出品情報登録機能</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">5 / 10</div>
                     <img src="imgF4.gif" style="width:100%">
                     <div class="text">商品一覧表示機能</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">6 / 10</div>
                     <img src="imgF5.gif" style="width:100%">
                     <div class="text">商品詳細表示機能</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">7 / 10</div>
                     <img src="imgF6.gif" style="width:100%">
                     <div class="text">商品情報編集機能</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">8 / 10</div>
                     <img src="imgF7.gif" style="width:100%">
                     <div class="text">商品情報削除機能</div>
                   </div>
 
-                  <div class="mySlidesB otherImages">
+                  <div class="mySlides2 otherImages">
                     <div class="numbertext">9 / 10</div>
                     <img src="imgF8.gif" style="width:100%">
                     <div class="text">商品購入機能</div>
                   </div>
 
-　                <div class="mySlidesB otherImages">
+　                <div class="mySlides2 otherImages">
                     <div class="numbertext">9 / 10</div>
                     <img src="imgF9.png" style="width:60%">
                     <div class="text">商品出品画像の複数登録</div>
                   </div>
 
                   <!-- Next and previous buttons -->
-                  <a class="prev" onclick="plusSlidesB(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlidesB(1)">&#10095;</a>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
                 <br>
 
                 <!-- The dots/circles -->
                 <div style="text-align:center">
-                  <span class="dotB" onclick="currentSlideB(1)"></span>
-                  <span class="dotB" onclick="currentSlideB(2)"></span>
-                  <span class="dotB" onclick="currentSlideB(3)"></span>
-                  <span class="dotB" onclick="currentSlideB(4)"></span>
-                  <span class="dotB" onclick="currentSlideB(5)"></span>
-                  <span class="dotB" onclick="currentSlideB(6)"></span>
-                  <span class="dotB" onclick="currentSlideB(7)"></span>
-                  <span class="dotB" onclick="currentSlideB(8)"></span>
-                  <span class="dotB" onclick="currentSlideB(9)"></span>
-                  <span class="dotB" onclick="currentSlideB(10)"></span>
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                  <span class="dot" onclick="currentSlide(6)"></span>
+                  <span class="dot" onclick="currentSlide(7)"></span>
+                  <span class="dot" onclick="currentSlide(8)"></span>
+                  <span class="dot" onclick="currentSlide(9)"></span>
+                  <span class="dot" onclick="currentSlide(10)"></span>
                 </div>
                 <div class="row">
                     <dl class="col-sm-2">
