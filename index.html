@@ -161,21 +161,21 @@
         showSlidesB(slideIndexB);
 
         // Next/previous controls
-        function plusSlidesB(n) {
-          showSlidesB(slideIndexB += n);
+        function plusSlidesB(nB) {
+          showSlidesB(slideIndexB += nB);
         }
 
         // Thumbnail image controls
-        function currentSlideB(n) {
-          showSlidesB(slideIndexB = n);
+        function currentSlideB(nB) {
+          showSlidesB(slideIndexB = nB);
         }
 
-        function showSlidesB(n) {
+        function showSlidesB(nB) {
           var iB;
           var slidesB = document.getElementsByClassName("mySlidesB");
           var dotsB = document.getElementsByClassName("dotB");
-          if (n > slidesB.length) {slideIndexB = 1}
-          if (n < 1) {slideIndexB = slidesB.length}
+          if (nB > slidesB.length) {slideIndexB = 1}
+          if (nB < 1) {slideIndexB = slidesB.length}
           for (iB = 0; iB < slidesB.length; iB++) {
               slidesB[iB].style.display = "none";
           }
